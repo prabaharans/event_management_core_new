@@ -1,4 +1,4 @@
-<?php 
+<?php
 $records = getHolidayRecords();
 ?>
 <div class="card">
@@ -6,14 +6,17 @@ $records = getHolidayRecords();
     <h3 class="card-title">Holiday List</h3>
   </div>
   <!-- /.card-header -->
-  <div class="card-body">
-    <table class="table table-bordered">
+  <div class="card-body table-responsive p-0">
+    <table class="table table-bordered text-nowrap text-small">
+    <thead>
       <tr>
-        <th style="width: 10px">#</th>
+        <th>#</th>
         <th>Date</th>
         <th>Reason</th>
         <th>Action</th>
       </tr>
+    </thead>
+    <tbody>
       <?php
 	  $idx = 1;
 	  foreach($records as $rec) {
@@ -23,9 +26,10 @@ $records = getHolidayRecords();
         <td><?php echo $idx++; ?></td>
         <td><?php echo $hdate; ?></a></td>
         <td><?php echo $hreason; ?></td>
-        <td><a href="javascript:deleteHoliday('<?php echo $hid ?>');">Delete</a></td>
+        <td><a href="javascript:deleteHoliday('<?php echo $hid ?>');" class="btn btn-outline-danger btn-xs">Delete</a></td>
       </tr>
       <?php } ?>
+      </tbody>
     </table>
   </div>
   <!-- /.card-body -->

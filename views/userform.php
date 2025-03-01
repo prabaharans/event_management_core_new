@@ -1,5 +1,5 @@
 <div class="col-md-8">
-  
+
 <link href="<?php echo WEB_ROOT; ?>library/spry/textfieldvalidation/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
 <script src="<?php echo WEB_ROOT; ?>library/spry/textfieldvalidation/SpryValidationTextField.js" type="text/javascript"></script>
 
@@ -9,7 +9,7 @@
 <link href="<?php echo WEB_ROOT; ?>library/spry/selectvalidation/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
 <script src="<?php echo WEB_ROOT; ?>library/spry/selectvalidation/SpryValidationSelect.js" type="text/javascript"></script>
 
-<div class="card card-primary">
+<div class="card card-info">
   <div class="card-header with-border">
     <h3 class="card-title"><b>User Registration</b></h3>
   </div>
@@ -18,55 +18,55 @@
   <form role="form" action="<?php echo WEB_ROOT; ?>views/process.php?cmd=create" method="post">
     <div class="card-body">
       <div class="form-group">
-        <label for="exampleInputEmail1">Name</label>
+        <label for="exampleInputEmail1" class="text-small">Name</label>
         <span id="sprytf_name">
-		<input type="text" name="name" class="form-control input-sm" placeholder="Username">
-		<span class="textfieldRequiredMsg">Name is required.</span>
-		<span class="textfieldMinCharsMsg">Name must specify at least 6 characters.</span>
+		<input type="text" name="name" class="form-control form-control-sm input-sm" placeholder="Username">
+		<span class="textfieldRequiredMsg text-small">Name is required.</span>
+		<span class="textfieldMinCharsMsg text-small">Name must specify at least 6 characters.</span>
 		</span>
       </div>
 	  <div class="form-group">
-        <label for="exampleInputEmail1">Address</label>
+        <label for="exampleInputEmail1" class="text-small">Address</label>
 		<span id="sprytf_address">
-        <textarea name="address" class="form-control input-sm" placeholder="Address"></textarea>
-		<span class="textareaRequiredMsg">Address is required.</span>
-		<span class="textareaMinCharsMsg">Address must specify at least 10 characters.</span>	
+        <textarea name="address" class="form-control form-control-sm input-sm" placeholder="Address"></textarea>
+		<span class="textareaRequiredMsg text-small">Address is required.</span>
+		<span class="textareaMinCharsMsg text-small">Address must specify at least 10 characters.</span>
 		</span>
       </div>
 	  <div class="form-group">
-        <label for="exampleInputEmail1">Phone</label>
+        <label for="exampleInputEmail1" class="text-small">Phone</label>
 		<span id="sprytf_phone">
-        <input type="text" name="phone" class="form-control input-sm"  placeholder="Phone number">
-		<span class="textfieldRequiredMsg">Phone number is required.</span>
+        <input type="text" name="phone" class="form-control form-control-sm input-sm"  placeholder="Phone number">
+		<span class="textfieldRequiredMsg text-small">Phone number is required.</span>
 		</span>
       </div>
 	  <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
+        <label for="exampleInputEmail1" class="text-small">Email address</label>
 		<span id="sprytf_email">
-        <input type="text" name="email" class="form-control input-sm" placeholder="Enter email">
-		<span class="textfieldRequiredMsg">Email ID is required.</span>
-		<span class="textfieldInvalidFormatMsg">Please enter a valid email (user@domain.com).</span>
+        <input type="text" name="email" class="form-control form-control-sm input-sm" placeholder="Enter email">
+		<span class="textfieldRequiredMsg text-small">Email ID is required.</span>
+		<span class="textfieldInvalidFormatMsg text-small">Please enter a valid email (user@domain.com).</span>
 		</span>
       </div>
-	  
+
 
 	<div class="form-group">
-        <label for="exampleInputEmail1">Uset Type</label>
+        <label for="exampleInputEmail1" class="text-small">Uset Type</label>
 		<span id="sprytf_type">
-        <select name="type"  class="form-control input-sm">
+        <select name="type"  class="form-control form-control-sm input-sm">
 			<option value=""> -- select user type --</option>
 			<option value="student">Student</option>
 			<option value="teacher">Teacher</option>
 		</select>
-		<span class="selectRequiredMsg">Please select User Type.</span>
+		<span class="selectRequiredMsg text-small">Please select User Type.</span>
 		</span>
-		
+
       </div>
-	  		  
-	  
+
+
     <!-- /.card-body -->
     <div class="card-footer">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn bg-gradient-info">Submit</button>
     </div>
   </form>
 </div>

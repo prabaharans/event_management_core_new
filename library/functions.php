@@ -184,9 +184,9 @@ function generateHolidayPagination() {
 	$result = dbQuery($dbConn, $sql);
 	$count 	= dbNumRows($result);
 	$pages 	= ceil($count/$per_page);
-	$pageno = '<ul class="pagination pagination-sm no-margin pull-right">';
+	$pageno = '<ul class="pagination pagination-sm no-margin float-right">';
 	for($i=1; $i<=$pages; $i++)	{
-		$pageno .= "<li><a href=\"?v=HOLY&page=$i\">".$i."</a></li>";
+		$pageno .= "<li class='page-item'><a class='page-link' href=\"?v=HOLY&page=$i\">".$i."</a></li>";
 	}
 	$pageno .= 	"</ul>";
 	return $pageno;
@@ -199,11 +199,11 @@ function generatePagination(){
 	$result = dbQuery($dbConn, $sql);
 	$count 	= dbNumRows($result);
 	$pages 	= ceil($count/$per_page);
-	$pageno = '<ul class="pagination pagination-sm no-margin pull-right">';
+	$pageno = '<ul class="pagination pagination-sm no-margin float-right">';
 	for($i=1; $i<=$pages; $i++)	{
 	//<li><a href="#">1</a></li>
 		//$pageno .= "<a href=\"?v=USER&page=$i\"><li id=\".$i.\">".$i."</li></a> ";
-		$pageno .= "<li><a href=\"?v=USER&page=$i\">".$i."</a></li>";
+		$pageno .= "<li class='page-item'><a class='page-link' href=\"?v=USER&page=$i\">".$i."</a></li>";
 	}
 	$pageno .= 	"</ul>";
 	return $pageno;

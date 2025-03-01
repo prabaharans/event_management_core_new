@@ -32,7 +32,7 @@
 			}
 			?>
 		</select>
-		<span class="selectRequiredMsg">Name is required.</span>
+		<span class="selectRequiredMsg text-small">Name is required.</span>
 
 		</span>
       </div>
@@ -41,23 +41,23 @@
         <label for="exampleInputEmail1" class="text-small">Address</label>
 		<span id="sprytf_address">
         <textarea name="address" class="form-control form-control-sm input-sm" placeholder="Address" id="address"></textarea>
-		<span class="textareaRequiredMsg">Address is required.</span>
-		<span class="textareaMinCharsMsg">Address must specify at least 10 characters.</span>
+		<span class="textareaRequiredMsg text-small">Address is required.</span>
+		<span class="textareaMinCharsMsg text-small">Address must specify at least 10 characters.</span>
 		</span>
       </div>
 	  <div class="form-group">
         <label for="exampleInputEmail1" class="text-small">Phone</label>
 		<span id="sprytf_phone">
         <input type="text" name="phone" class="form-control form-control-sm input-sm"  placeholder="Phone number" id="phone">
-		<span class="textfieldRequiredMsg">Phone number is required.</span>
+		<span class="textfieldRequiredMsg text-small">Phone number is required.</span>
 		</span>
       </div>
 	  <div class="form-group">
         <label for="exampleInputEmail1" class="text-small">Email address</label>
 		<span id="sprytf_email">
         <input type="text" name="email" class="form-control form-control-sm input-sm" placeholder="Enter email" id="email">
-		<span class="textfieldRequiredMsg">Email ID is required.</span>
-		<span class="textfieldInvalidFormatMsg">Please enter a valid email (user@domain.com).</span>
+		<span class="textfieldRequiredMsg text-small">Email ID is required.</span>
+		<span class="textfieldInvalidFormatMsg text-small">Please enter a valid email (user@domain.com).</span>
 		</span>
       </div>
 
@@ -67,16 +67,16 @@
 			<label class="text-small">Reservation Date</label>
 			<span id="sprytf_rdate">
         	<input type="text" name="rdate" class="form-control form-control-sm" placeholder="YYYY-mm-dd">
-			<span class="textfieldRequiredMsg">Date is required.</span>
-			<span class="textfieldInvalidFormatMsg">Invalid date Format.</span>
+			<span class="textfieldRequiredMsg text-small">Date is required.</span>
+			<span class="textfieldInvalidFormatMsg text-small">Invalid date Format.</span>
 			</span>
         </div>
         <div class="col-6">
 			<label class="text-small">Reservation Time</label>
 			<span id="sprytf_rtime">
             <input type="text" name="rtime" class="form-control form-control-sm" placeholder="HH:mm">
-			<span class="textfieldRequiredMsg">Time is required.</span>
-			<span class="textfieldInvalidFormatMsg">Invalid time Format.</span>
+			<span class="textfieldRequiredMsg text-small">Time is required.</span>
+			<span class="textfieldInvalidFormatMsg text-small">Invalid time Format.</span>
 			</span>
        </div>
       </div>
@@ -86,12 +86,12 @@
         <label for="exampleInputPassword1" class="text-small">No of Peoples</label>
 		<span id="sprytf_ucount">
         <input type="text" name="ucount" class="form-control form-control-sm input-sm" placeholder="No of peoples" >
-		<span class="textfieldRequiredMsg">No of peoples is required.</span>
-		<span class="textfieldInvalidFormatMsg">Invalid Format.</span>
+		<span class="textfieldRequiredMsg text-small">No of peoples is required.</span>
+		<span class="textfieldInvalidFormatMsg text-small">Invalid Format.</span>
       </div>
     <!-- /.box-body -->
     <div class="box-footer">
-      <button type="submit" class="btn btn-info">Submit</button>
+      <button type="submit" class="btn bg-gradient-info">Submit</button>
     </div>
   </form>
 </div>

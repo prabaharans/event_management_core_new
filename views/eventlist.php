@@ -1,4 +1,4 @@
-<?php 
+<?php
 $records = getBookingRecords();
 $utype = '';
 $type = $_SESSION['calendar_fd_user']['type'];
@@ -13,20 +13,24 @@ if($type == 'admin') {
       <h3 class="card-title">Event Booking Details</h3>
     </div>
     <!-- /.card-header -->
-    <div class="card-body">
-      <table class="table table-bordered">
-        <tr>
-          <th style="width: 10px">#</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Booking Date</th>
-          <th style="width: 140px">Number of People</th>
-          <th style="width: 100px">Status</th>
-          <?php if($utype == 'on') { ?>
-		  <th >Action</th>
-		  <?php } ?>
-        </tr>
+    <div class="card-body card-body table-responsive p-0">
+      <table class="table table-bordered text-nowrap text-small">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Booking Date</th>
+            <th>Number of People</th>
+            <th>Status</th>
+            <?php if($utype == 'on') { ?>
+              <th>Action</th>
+            <?php } ?>
+          </tr>
+        </thead>
+        <tbody>
+
         <?php
 	  $idx = 1;
 	  foreach($records as $rec) {
@@ -43,19 +47,20 @@ if($type == 'admin') {
           <td><?php echo $user_phone; ?></td>
           <td><?php echo $res_date; ?></td>
           <td><?php echo $count; ?></td>
-          <td><span class="label label-<?php echo $stat; ?>"><?php echo $status; ?></span></td>
+          <td><span class="badge badge-<?php echo $stat; ?>"><?php echo $status; ?></span></td>
           <?php if($utype == 'on') { ?>
 		  <td><?php if($status == "PENDING") {?>
-            <a href="javascript:approve('<?php echo $user_id ?>');">Approve</a>&nbsp;/
-			&nbsp;<a href="javascript:decline('<?php echo $user_id ?>');">Denied</a>&nbsp;/
-			&nbsp;<a href="javascript:deleteUser('<?php echo $user_id ?>');">Delete</a>
+            <a href="javascript:approve('<?php echo $user_id ?>');" class="btn btn-outline-success btn-xs">Approve</a>&nbsp;/
+			&nbsp;<a href="javascript:decline('<?php echo $user_id ?>');" class="btn btn-outline-warning btn-xs">Denied</a>&nbsp;/
+			&nbsp;<a href="javascript:deleteUser('<?php echo $user_id ?>');" class="btn btn-outline-danger btn-xs">Delete</a>
             <?php } else { ?>
-			<a href="javascript:deleteUser('<?php echo $user_id ?>');">Delete</a>
+			<a href="javascript:deleteUser('<?php echo $user_id ?>');" class="btn btn-outline-danger btn-xs">Delete</a>
 			<?php }//else ?>
           </td>
 		  <?php } ?>
         </tr>
         <?php } ?>
+            </tbody>
       </table>
     </div>
     <!-- /.card-body -->

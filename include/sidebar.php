@@ -6,7 +6,7 @@
 					<a href="<?php echo WEB_ROOT; ?>views/?v=DB" class="nav-link"><i class="nav-icon fas fa-calendar"></i><p>Events Calendar</p></a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo WEB_ROOT; ?>views/?v=LIST" class="nav-link"><i class="nav-icon fas fa-newspaper-o"></i><p>Event Booking</p></a>
+					<a href="<?php echo WEB_ROOT; ?>views/?v=LIST" class="nav-link"><i class="nav-icon fas fa-calendar-days"></i><p>Event Booking</p></a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo WEB_ROOT; ?>views/?v=USERS" class="nav-link"><i class="nav-icon fas fa-users"></i><p>User Details</p></a>

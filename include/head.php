@@ -11,9 +11,6 @@
 <link rel="stylesheet" href="<?php echo WEB_ROOT; ?>plugins/fontawesome/css/all.min.css">
 <!-- Ionicons -->
 <link rel="stylesheet" href="<?php echo WEB_ROOT; ?>plugins/ionicons/css/icon.min.css">
-<!-- fullCalendar 2.2.5-->
-<!-- <link rel="stylesheet" href="<?php echo WEB_ROOT; ?>plugins/fullcalendar/fullcalendar.min.css">
-<link rel="stylesheet" href="<?php echo WEB_ROOT; ?>plugins/fullcalendar/fullcalendar.print.css" media="print"> -->
 
 <!-- jQuery 2.1.4 -->
 <script src="<?php echo WEB_ROOT; ?>plugins/jQuery/jQuery.min.js"></script>

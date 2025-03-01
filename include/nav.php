@@ -14,8 +14,8 @@
 		</li>
 		<li class="nav-item d-none d-sm-inline-block">
 		<a class="nav-link" href="<?php echo WEB_ROOT; ?>?logout" title="Log Out">
-		<i class="nav-icon fas fa-sign-out" aria-hidden="true"></i>
-		<!-- <span class="hidden-xs">Log Out</span> -->
+		<i class="nav-icon fas fa-sign-out col-2" aria-hidden="true"></i>
+		<span class="hidden-xs">Log Out</span>
 		</a>
 		</li>
 	</ul>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 $records = getUserRecords();
 $utype = '';
 $type = $_SESSION['calendar_fd_user']['type'];
@@ -13,19 +13,22 @@ if($type == 'admin' || $type == 'teacher') {
       <h3 class="card-title">User details</h3>
     </div>
     <!-- /.card-header -->
-    <div class="card-body">
-      <table class="table table-bordered">
+    <div class="card-body table-responsive p-0">
+      <table class="table table-bordered text-nowrap text-small">
+        <thead>
         <tr>
-          <th style="width: 10px">#</th>
+          <th>#</th>
           <th>Name</th>
           <th>Email</th>
           <th>Phone</th>
           <th>User Role</th>
-          <th style="width: 100px">Status</th>
+          <th>Status</th>
           <?php if($utype == 'on') { ?>
 		  <th>Action</th>
 		  <?php } ?>
         </tr>
+          </thead>
+          <tbody>
         <?php
 	  $idx = 1;
 	  foreach($records as $rec) {
@@ -41,33 +44,36 @@ if($type == 'admin' || $type == 'teacher') {
           <td><a href="<?php echo WEB_ROOT; ?>views/?v=USER&ID=<?php echo $user_id; ?>"><?php echo strtoupper($user_name); ?></a></td>
           <td><?php echo $user_email; ?></td>
           <td><?php echo $user_phone; ?></td>
-         
+
           <td>
-		  <i class="fa <?php echo $type == 'teacher' ? 'fa-user' : 'fa-users' ; ?>" aria-hidden="true"></i>&nbsp;&nbsp;<?php echo strtoupper($type); ?></i></td>
-          <td><span class="label label-<?php echo $stat; ?>"><?php echo strtoupper($status); ?></span></td>
+		  <i class="fa <?php echo $type == 'teacher' ? 'fa-user' : 'fa-users' ; ?> col-2" aria-hidden="true"></i>&nbsp;&nbsp;<?php echo strtoupper($type); ?></i></td>
+          <td><span class="badge badge-<?php echo $stat; ?>"><?php echo strtoupper($status); ?></span></td>
           <?php if($utype == 'on') { ?>
 		  <td><?php if($status == "active") {?>
-            <a href="javascript:status('<?php echo $user_id ?>', 'inactive');">Inactive</a>&nbsp;/
-			&nbsp;<a href="javascript:status('<?php echo $user_id ?>', 'lock');">Account Lock</a>&nbsp;/
-			&nbsp;<a href="javascript:status('<?php echo $user_id ?>', 'delete');">Delete</a>
+            <a href="javascript:status('<?php echo $user_id ?>', 'inactive');" class="btn btn-outline-warning btn-xs">Inactive</a>&nbsp;/
+			&nbsp;<a href="javascript:status('<?php echo $user_id ?>', 'lock');" class="btn btn-outline-info btn-xs">Account Lock</a>&nbsp;/
+			&nbsp;<a href="javascript:status('<?php echo $user_id ?>', 'delete');" class="btn btn-outline-danger btn-xs">Delete</a>
             <?php } else { ?>
-			<a href="javascript:status('<?php echo $user_id ?>', 'active');">Active</a>
+			<a href="javascript:status('<?php echo $user_id ?>', 'active');" class="btn btn-outline-success btn-xs">Active</a>
 			<?php }//else ?>
           </td>
 		  <?php }?>
         </tr>
         <?php } ?>
+            </tbody>
       </table>
     </div>
     <!-- /.card-body -->
     <div class="card-footer clearfix">
-	
-	<?php 
+
+	<?php
 	$type = $_SESSION['calendar_fd_user']['type'];
 	if($type == 'admin') {
 	?>
-	<button type="button" class="btn btn-info" onclick="javascript:createUserForm();"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Create a new User</button>
-	<?php 
+  <div class="col-sm-3">
+	  <button type="button" class="btn btn-block bg-gradient-info" onclick="javascript:createUserForm();"><i class="fa fa-user-plus col-2" aria-hidden="true"></i>Create a new User</button>
+  </div>
+	<?php
 	}
 	?>
       <!--

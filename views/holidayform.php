@@ -11,29 +11,29 @@
   <form class="form-horizontal" action="<?php echo WEB_ROOT; ?>api/process.php?cmd=holiday" method="post">
     <div class="card-body">
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-4 control-label">Holiday Date</label>
+        <label for="inputEmail3" class="col-sm-4 control-label text-small">Holiday Date</label>
         <div class="col-sm-8">
 		<span id="sprytf_date">
-          <input type="text" class="form-control input-sm" name="date" placeholder="yyyy-mm-dd">
-		  <span class="textfieldRequiredMsg">Date is required.</span>
+          <input type="text" class="form-control form-control-sm input-sm" name="date" placeholder="yyyy-mm-dd">
+		  <span class="textfieldRequiredMsg text-small">Date is required.</span>
 		</span>
         </div>
       </div>
-	  
+
       <div class="form-group">
-        <label for="inputPassword3" class="col-sm-4 control-label">Holiday Reason</label>
+        <label for="inputPassword3" class="col-sm-4 control-label text-small">Holiday Reason</label>
         <div class="col-sm-8">
 		<span id="sprytf_reason">
-          <input type="text" class="form-control input-sm" name="reason" placeholder="Holiday reason">
-		  <span class="textfieldRequiredMsg">Reason is required.</span>
-		  <span class="textfieldMinCharsMsg">Reason must specify at least 8 characters.</span>
+          <input type="text" class="form-control form-control-sm input-sm" name="reason" placeholder="Holiday reason">
+		  <span class="textfieldRequiredMsg text-small">Reason is required.</span>
+		  <span class="textfieldMinCharsMsg text-small">Reason must specify at least 8 characters.</span>
 		</span>
         </div>
       </div>
     </div>
     <!-- /.card-body -->
     <div class="card-footer">
-      <button type="submit" class="btn btn-info pull-right">Add Holiday</button>
+      <button type="submit" class="btn bg-gradient-info pull-right">Add Holiday</button>
     </div>
     <!-- /.card-footer -->
   </form>

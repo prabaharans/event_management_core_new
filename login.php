@@ -23,11 +23,12 @@ if (isset($_POST['name']) && isset($_POST['pwd'])) {
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="<?php echo WEB_ROOT;?>bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="<?php echo WEB_ROOT; ?>plugins/fontawesome/css/all.min.css">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.4.0/collection/components/icon/icon.min.css">
+    <link rel="stylesheet" href="<?php echo WEB_ROOT; ?>plugins/ionicons/css/icon.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo WEB_ROOT;?>dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?php echo WEB_ROOT; ?>library/custom.css">
 
 	<link href="<?php echo WEB_ROOT; ?>library/spry/textfieldvalidation/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
 	<script src="<?php echo WEB_ROOT; ?>library/spry/textfieldvalidation/SpryValidationTextField.js" type="text/javascript"></script>
@@ -58,19 +59,19 @@ if (isset($_POST['name']) && isset($_POST['pwd'])) {
         <form action="" method="post">
           <div class="form-group has-feedback">
 		  	<span id="sprytf_name">
-            <input type="text" name="name" class="form-control" placeholder="Username">
+            <input type="text" name="name" class="form-control form-control-sm" placeholder="Username">
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
-			<span class="textfieldRequiredMsg">Username is required.</span>
-			<span class="textfieldMinCharsMsg">Username must specify at least 4 characters.</span>
+			<span class="textfieldRequiredMsg text-small">Username is required.</span>
+			<span class="textfieldMinCharsMsg text-small">Username must specify at least 4 characters.</span>
 			</span>
           </div>
           <div class="form-group has-feedback">
 		  	<span id="sprytf_pwd">
-            <input type="password" name="pwd" class="form-control" placeholder="Password">
+            <input type="password" name="pwd" class="form-control form-control-sm" placeholder="Password">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-			<span class="passwordRequiredMsg">Password is required.</span>
-			<span class="passwordMinCharsMsg">You must specify at least 6 characters.</span>
-			<span class="passwordMaxCharsMsg">You must specify at max 10 characters.</span>
+			<span class="passwordRequiredMsg text-small">Password is required.</span>
+			<span class="passwordMinCharsMsg text-small">You must specify at least 6 characters.</span>
+			<span class="passwordMaxCharsMsg text-small">You must specify at max 10 characters.</span>
 			</span>
           </div>
           <div class="row">
@@ -78,7 +79,7 @@ if (isset($_POST['name']) && isset($_POST['pwd'])) {
               New User <a href="<?php echo WEB_ROOT; ?>register.php">Register</a> here.
             </div><!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+              <button type="submit" class="btn bg-gradient-info btn-block">Sign In</button>
             </div><!-- /.col -->
           </div>
         </form>

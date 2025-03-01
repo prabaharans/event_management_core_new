@@ -31,11 +31,12 @@ if (isset($_POST['name']) && isset($_POST['pwd'])) {
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="<?php echo WEB_ROOT;?>bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="<?php echo WEB_ROOT; ?>plugins/fontawesome/css/all.min.css">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.4.0/collection/components/icon/icon.min.css">
+    <link rel="stylesheet" href="<?php echo WEB_ROOT; ?>plugins/ionicons/css/icon.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo WEB_ROOT;?>dist/css/adminlte.css">
+	<link rel="stylesheet" href="<?php echo WEB_ROOT; ?>library/custom.css">
 
 	<link href="<?php echo WEB_ROOT; ?>library/spry/textfieldvalidation/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
 	<script src="<?php echo WEB_ROOT; ?>library/spry/textfieldvalidation/SpryValidationTextField.js" type="text/javascript"></script>
@@ -81,60 +82,60 @@ if (isset($_POST['name']) && isset($_POST['pwd'])) {
         <form action="" method="post">
 
           <div class="form-group has-feedback">
-		  	<label for="exampleInputEmail1">Name</label>
+		  	<label for="exampleInputEmail1 text-small">Name</label>
 			<span id="sprytf_name">
-			<input type="text" name="name" class="form-control input-sm" placeholder="Username">
-			<span class="textfieldRequiredMsg">Name is required.</span>
-			<span class="textfieldMinCharsMsg">Name must specify at least 6 characters.</span>
+			<input type="text" name="name" class="form-control form-control-sm input-sm" placeholder="Username">
+			<span class="textfieldRequiredMsg text-small">Name is required.</span>
+			<span class="textfieldMinCharsMsg text-small">Name must specify at least 6 characters.</span>
 			</span>
           </div>
 
 		  <div class="form-group has-feedback">
-		  	<label for="exampleInputEmail1">Password</label>
+		  	<label for="exampleInputEmail1 text-small">Password</label>
 			<span id="sprytf_pwd">
-			<input type="password" name="pwd" class="form-control input-sm" placeholder="Password">
-			<span class="passwordRequiredMsg">A Password is required.</span>
-			<span class="passwordMinCharsMsg">Password must have minimum 6 characters.</span>
-			<span class="passwordMaxCharsMsg">Password must have maximum 10 characters.</span>
-			<span class="passwordInvalidStrengthMsg">The password strength condition not met.</span>
+			<input type="password" name="pwd" class="form-control form-control-sm input-sm" placeholder="Password">
+			<span class="passwordRequiredMsg text-small">A Password is required.</span>
+			<span class="passwordMinCharsMsg text-small">Password must have minimum 6 characters.</span>
+			<span class="passwordMaxCharsMsg text-small">Password must have maximum 10 characters.</span>
+			<span class="passwordInvalidStrengthMsg text-small">The password strength condition not met.</span>
 			</span>
           </div>
 
           <div class="form-group has-feedback">
-		  	<label for="exampleInputEmail1">Address</label>
+		  	<label for="exampleInputEmail1 text-small">Address</label>
 			<span id="sprytf_address">
-			<textarea name="address" class="form-control input-sm" placeholder="Address"></textarea>
-			<span class="textareaRequiredMsg">Address is required.</span>
-			<span class="textareaMinCharsMsg">Address must specify at least 10 characters.</span>
+			<textarea name="address" class="form-control form-control-sm input-sm" placeholder="Address"></textarea>
+			<span class="textareaRequiredMsg text-small">Address is required.</span>
+			<span class="textareaMinCharsMsg text-small">Address must specify at least 10 characters.</span>
 			</span>
           </div>
 
 		  <div class="form-group has-feedback">
-		  	<label for="exampleInputEmail1">Phone</label>
+		  	<label for="exampleInputEmail1 text-small">Phone</label>
 			<span id="sprytf_phone">
-			<input type="text" name="phone" class="form-control input-sm"  placeholder="Phone number">
-			<span class="textfieldRequiredMsg">Phone number is required.</span>
+			<input type="text" name="phone" class="form-control form-control-sm input-sm"  placeholder="Phone number">
+			<span class="textfieldRequiredMsg text-small">Phone number is required.</span>
 			</span>
           </div>
 
 		  <div class="form-group has-feedback">
-		  	<label for="exampleInputEmail1">Email address</label>
+		  	<label for="exampleInputEmail1 text-small">Email address</label>
 			<span id="sprytf_email">
-			<input type="text" name="email" class="form-control input-sm" placeholder="Enter email">
-			<span class="textfieldRequiredMsg">Email ID is required.</span>
-			<span class="textfieldInvalidFormatMsg">Please enter a valid email (user@domain.com).</span>
+			<input type="text" name="email" class="form-control form-control-sm input-sm" placeholder="Enter email">
+			<span class="textfieldRequiredMsg text-small">Email ID is required.</span>
+			<span class="textfieldInvalidFormatMsg text-small">Please enter a valid email (user@domain.com).</span>
 			</span>
           </div>
 
 		  <div class="form-group has-feedback">
-		  	<label for="exampleInputEmail1">Uset Type</label>
+		  	<label for="exampleInputEmail1 text-small">Uset Type</label>
 			<span id="sprytf_type">
-			<select name="type"  class="form-control input-sm">
+			<select name="type"  class="form-control form-control-sm input-sm">
 				<option value=""> -- select user type --</option>
 				<option value="student">Student</option>
 				<option value="teacher">Teacher</option>
 			</select>
-			<span class="selectRequiredMsg">Please select User Type.</span>
+			<span class="selectRequiredMsg text-small">Please select User Type.</span>
 			</span>
           </div>
 
@@ -143,7 +144,7 @@ if (isset($_POST['name']) && isset($_POST['pwd'])) {
               If you are already registered, <br/><a href="<?php echo WEB_ROOT; ?>login.php">Sign In</a> here.
             </div><!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+              <button type="submit" class="btn bg-gradient-info btn-block">Register</button>
             </div><!-- /.col -->
           </div>
         </form>
